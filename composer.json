@@ -1,0 +1,15 @@
+{
+    "name": "test/s3",
+    "description": "test s3 neo",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Bagus Rinaldhi",
+            "email": "bagus@dailysocial.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "aws/aws-sdk-php": "^3.0@dev"
+    }
+}
