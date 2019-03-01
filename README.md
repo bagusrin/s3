@@ -7,7 +7,7 @@ Manage Object Storage S3 Standart Amazon for PHP
 
 use Bagusrin\S3\S3Client;
 
-$client = new S3Client([
+$s3 = new S3Client([
   'key' => 'KEY',
   'secreet' => 'SECREET'
   'region' => 'idn',
@@ -15,7 +15,7 @@ $client = new S3Client([
 ]);
                     
 /** Upload file to S3 **/
-$client->uploadObject([
+$s3->uploadObject([
   'bucket' => 'perihal',
   'filepathName' => '020319/image.png',
   'file' => '/Users/admin/image.png'
@@ -23,7 +23,7 @@ $client->uploadObject([
             
             
 /** Delete file from S3 **/
-$client->deleteObject([
+$s3->deleteObject([
   'bucket' => 'perihal',
   'filepathName' => '020319/image.png'
 ]);
