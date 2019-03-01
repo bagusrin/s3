@@ -1,15 +1,20 @@
 {
-    "name": "test/s3",
-    "description": "test s3 neo",
+    "name": "bagusrin/s3",
+    "description": "3rd Party Object Storage s3",
     "type": "project",
     "authors": [
         {
             "name": "Bagus Rinaldhi",
-            "email": "bagus@dailysocial.net"
+            "email": "bagusrinn@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "aws/aws-sdk-php": "^3.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bagusrin\\S3\\": "src/"
+        }
     }
 }
