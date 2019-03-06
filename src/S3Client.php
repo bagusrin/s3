@@ -38,6 +38,7 @@ class S3Client{
             'Bucket' => $dt['bucket'], //=== perihal
             'Key'    => $dt['filepathName'], //=== 020319/image.png
             'SourceFile' => $dt['file'], //=== /Users/admin/image.png => file yg mau diupload
+            'ContentType' => $dt['contentType'],
             'ACL' => 'public-read'
         ]);
 
