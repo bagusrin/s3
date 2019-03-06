@@ -18,7 +18,8 @@ $s3 = new S3Client([
 $s3->uploadObject([
   'bucket' => 'perihal',
   'filepathName' => '020319/image.png',
-  'file' => '/Users/admin/image.png'
+  'file' => '/Users/admin/image.png',
+  'contentType' => 'image/png'
 ]);
             
             
