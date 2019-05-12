@@ -34,13 +34,27 @@ class S3Client{
      */
     public function uploadObject(array $dt = []){
 
-        $result = $this->s3->putObject([
-            'Bucket' => $dt['bucket'], //=== perihal
-            'Key'    => $dt['filepathName'], //=== 020319/image.png
-            'SourceFile' => $dt['file'], //=== /Users/admin/image.png => file yg mau diupload
-            'ContentType' => $dt['contentType'],
-            'ACL' => 'public-read'
-        ]);
+        if(!empty($dt['contentType'])){
+
+            $result = $this->s3->putObject([
+                'Bucket' => $dt['bucket'], //=== perihal
+                'Key'    => $dt['filepathName'], //=== 020319/image.png
+                'SourceFile' => $dt['file'], //=== /Users/admin/image.png => file yg mau diupload
+                'ContentType' => $dt['contentType'], //need for base64 upload
+                'ACL' => 'public-read'
+            ]);
+
+        }else{
+
+            $result = $this->s3->putObject([
+                'Bucket' => $dt['bucket'], //=== perihal
+                'Key'    => $dt['filepathName'], //=== 020319/image.png
+                'SourceFile' => $dt['file'], //=== /Users/admin/image.png => file yg mau diupload
+                'ACL' => 'public-read'
+            ]);
+        }
+
+        
 
         return $result;
     }
